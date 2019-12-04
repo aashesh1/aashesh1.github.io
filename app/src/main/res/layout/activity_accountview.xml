@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".accountview">
+
+    <TextView
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1DE9B6"
+        android:backgroundTint="#00E676"
+        android:breakStrategy="high_quality"
+        android:capitalize="sentences"
+        android:drawableRight="@drawable/ic_person_black_24dp"
+        android:drawableTintMode="add"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:text="hello "
+        android:textSize="36sp"
+        android:textStyle="normal|bold|italic"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/lanme"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#00E676"
+        android:drawableRight="@drawable/ic_people_black_24dp"
+        android:text="hello "
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/customerid"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#FFFFFF"
+        android:drawableRight="@drawable/ic_lock_white_24dp"
+        android:text="hello "
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/blance"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="#00E676"
+        android:drawableRight="@drawable/ic_compare_arrows_black_24dp"
+        android:text="hello "
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+
+</LinearLayout>

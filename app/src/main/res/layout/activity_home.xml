@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/transfer"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/transfer_icon"
+                android:padding="10dp"
+                android:background="@drawable/circle"
+                android:minWidth="50dp"
+                android:minHeight="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_attach_money_white_24dp" />
+
+                <TextView
+                    android:id="@+id/transfer_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transfer_icon"
+                    android:gravity="center"
+                    android:text="Transfer To Any Customer "
+                    android:textColor="#536976" />
+
+            <TextView
+                android:id="@+id/transfer_helper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="#BBD2C5"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="12dp"
+                android:layout_below="@+id/transfer_label"
+                android:text="@string/transfer_helper" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/transaction"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/transaction_icon"
+                    android:padding="10dp"
+                    android:background="@drawable/circle"
+                    android:minWidth="50dp"
+                    android:minHeight="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_compare_arrows_black_24dp" />
+
+                <TextView
+                    android:id="@+id/transaction_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transaction_icon"
+                    android:gravity="center"
+                    android:text="Tansfer to Any food vanture , home bills"
+                    android:textColor="#536976" />
+
+                <TextView
+                    android:id="@+id/transaction_helper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transaction_label"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="FOOD PANDHA , K ELTIC ,SUI GAS , AAWAB"
+                    android:textAllCaps="true"
+                    android:textColor="#BBD2C5"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/account"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/transaction_helper2"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="DETAILS"
+                    android:textAllCaps="true"
+                    android:textColor="#BBD2C5"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/account_icon"
+                    android:padding="10dp"
+                    android:background="@drawable/circle"
+                    android:minWidth="50dp"
+                    android:minHeight="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_account_balance_white_24dp" />
+
+                <TextView
+                    android:id="@+id/account_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#536976"
+                    android:layout_below="@+id/account_icon"
+                    android:text="@string/account" />
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logout"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/transaction_helper3"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:text="Thankyou we hope you will come back  "
+                    android:textAllCaps="true"
+                    android:textColor="#BBD2C5"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/logout_icon"
+                    android:padding="10dp"
+                    android:background="@drawable/circle"
+                    android:minWidth="50dp"
+                    android:minHeight="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_lock_white_24dp" />
+
+                <TextView
+                    android:id="@+id/logout_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#536976"
+                    android:layout_below="@+id/logout_icon"
+                    android:text="@string/logout" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</LinearLayout>

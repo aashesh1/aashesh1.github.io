@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">Mobile Banking</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="customer">Customer</string>
+    <string name="manager">Manager</string>
+    <string name="customers">Customers</string>
+    <string name="login_failed">you have entered an invalid username or password</string>
+    <string name="transfer">Transfer</string>
+    <string name="transfer_helper">Transfer money from one account to another.</string>
+    <string name="transaction">Transaction</string>
+    <string name="transaction_helper">Details of the committed transactions.</string>
+    <string name="account_number">Account Number</string>
+    <string name="account">Account</string>
+    <string name="account_helper">create a new account.</string>
+    <string name="balance">Balance</string>
+    <string name="current">Current</string>
+    <string name="Saving">Saving</string>
+    <string name="submit">Submit</string>
+    <string name="amount">Amount</string>
+    <string name="account_failed">account number does not exists.</string>
+</resources>
