@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
             user.address = address;
             user.cnic = "43202-5680128-5";
             user.email = "fahad.khan@outlook.com";
-            user.fname = "fahad";
-            user.lname = "khan";
+            user.fname = "food";
+            user.lname = "pandha";
             user.phoneNumber = "0310-2756530";
 
             try {

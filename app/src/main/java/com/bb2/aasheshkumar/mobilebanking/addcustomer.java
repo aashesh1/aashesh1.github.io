@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.bb2.aasheshkumar.mobilebanking.entities.Address;
 import com.bb2.aasheshkumar.mobilebanking.entities.Customer;
@@ -66,5 +67,6 @@ customer.balance= Double.parseDouble(editablance.getText().toString());
 
 
         db.customerDao().insertAll(customer);
+        Toast.makeText(this, " data saved", Toast.LENGTH_SHORT).show();
     }
 }

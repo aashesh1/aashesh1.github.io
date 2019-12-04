@@ -4,19 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.bb2.aasheshkumar.mobilebanking.entities.Customer;
+import com.bb2.aasheshkumar.mobilebanking.utility.ApiHelper;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.IOException;
 import java.util.List;
+
+import okhttp3.Response;
 
 public class TransferActivity extends AppCompatActivity {
 
@@ -53,6 +60,9 @@ public class TransferActivity extends AppCompatActivity {
         Customer toCusomter = db.customerDao().get(Integer.parseInt(toAccountNumber.getText().toString()));
         Customer fromCustoner= db.customerDao().getCustomer(username);
 
+        String msg = "THe amount of "+Double.parseDouble(amount.getText().toString())+" has been cerdited to you account by "+fromCustoner.user.fname+" "+fromCustoner.user.lname;
+        new EmailTask().execute("https://vast-thicket-60809.herokuapp.com/"+toCusomter.user.email+"/"+msg);
+
         if(toCusomter.balance == null)
         toCusomter.balance = 0.0;
         if(fromCustoner.balance == null)
@@ -63,6 +73,41 @@ public class TransferActivity extends AppCompatActivity {
         db.customerDao().updateAll(toCusomter,fromCustoner);
 
 
+    }
+
+
+    private class EmailTask extends AsyncTask<String,Void,Object> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected void onPostExecute(Object res) {
+            super.onPostExecute(res);
+
+            if(res instanceof IOException){
+                IOException e = (IOException) res;
+                Toast.makeText(TransferActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+            }else if(res instanceof Response){
+                Response response = (Response) res;
+                Toast.makeText(TransferActivity.this, "Email sent.", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+
+        @Override
+        protected Object doInBackground(String... args) {
+            Response res = null;
+            try {
+                res = ApiHelper.getContent(args[0]);
+                return res;
+            }catch (IOException ioException){
+                return ioException;
+            }
+        }
     }
 
 }
